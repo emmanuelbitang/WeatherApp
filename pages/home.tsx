@@ -12,7 +12,7 @@ import { useRouter } from 'next/router';
 import Head from 'next/head';
 
 import config from '../next.config';
-import Weather from '../components/weather';
+import Weather from '../components/Weather';
 
 function Home() {
   const router = useRouter();
@@ -22,7 +22,7 @@ function Home() {
   const [error, setError] = useState(false);
   const [errorMessage, setErrorMessage] = useState('');
   const [showTable, setShowTable] = useState(false);
-  const [info, setInfo] = useState({});
+  const [info, setInfo] = useState({ name: '', html_url: '' });
 
   useEffect(() => {
     const fetchInfo = async () => {
